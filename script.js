@@ -139,12 +139,13 @@ function normalizeCountry(country) {
         alpha2Code: alpha2,
         cca3: alpha3,
 
-        flags: {
-            png: alpha2
-                ? `https://flags.restcountries.com/v5/w320/${alpha2.toLowerCase()}.png`
-                : ""
-        },
-
+flags: {
+    png: country.names?.common === "Abkhazia"
+        ? "./Flag_of_the_Republic_of_Abkhazia.svg.webp"
+        : alpha2
+            ? `https://flags.restcountries.com/v5/w320/${alpha2.toLowerCase()}.png`
+            : ""
+},
         population: Number(country.population) || 0,
         region: country.region || "N/A",
         subregion: country.subregion || "N/A",
@@ -404,9 +405,16 @@ function displayCountryDetails(country) {
 
     backButton.addEventListener("click", filterCountries);
 
-    const flag = document.createElement("img");
-    flag.className = "country-flag detail-flag";
-    flag.src = country.flags.png;
+   const flag = document.createElement("img");
+flag.className = "country-flag detail-flag";
+flag.alt = `Flag of ${country.name.common}`;
+
+flag.src = country.flags.png || "";
+console.log("Abkhazia flag URL:", country.flags.png);
+
+flag.onerror = () => {
+    flag.style.display = "none";
+};
     flag.alt = `Flag of ${country.name.common}`;
 
     const information = document.createElement("div");
