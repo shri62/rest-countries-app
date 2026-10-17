@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore countries around the world using the REST Countries API."
+    >
+
+    <title>Where in the World?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Where in the World?</h1>
+
+            <button
+                id="theme-toggle"
+                type="button"
+                aria-label="Switch color theme"
+            >
+                🌙 Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <!-- Search and region filter -->
+        <section class="search-section" aria-label="Search countries">
+            <div class="search-box">
+                <label for="search-input" class="visually-hidden">
+                    Search for a country
+                </label>
+
+                <span aria-hidden="true">🔍</span>
+
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search for a country..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="filter-box">
+                <label for="region-filter" class="visually-hidden">
+                    Filter by region
+                </label>
+
+                <select id="region-filter">
+                    <option value="">Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="Antarctic">Antarctic</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Countries are loaded here by JavaScript -->
+        <section
+            id="countries-container"
+            class="countries-container"
+            aria-live="polite"
+            aria-label="Countries"
+        >
+            <p>Loading countries...</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            Country information provided by the REST Countries API.
+        </p>
+    </footer>
+</body>
+</html>
