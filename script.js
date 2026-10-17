@@ -305,7 +305,8 @@ function displayCountries(countries) {
             `View details for ${country.name.common}`
         );
 
-        const flag = document.createElement("img");
+        const flag = document.createElement("img"); 
+        flag.alt = `Flag of ${country.name.common}`;
 
         flag.className = "country-flag";
         flag.src = country.flags.png;
