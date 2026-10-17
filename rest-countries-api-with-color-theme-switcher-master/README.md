@@ -98,3 +98,71 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+
+
+
+# REST Countries App
+
+## About the Project
+
+This project is a website that shows information about countries around the world. It uses the REST Countries API to get country information and display it on the page.
+
+## Features
+
+- **View Countries:** See countries, their flags, and basic information.
+- **Search Countries:** Search for a country by name.
+- **Filter by Region:** Filter countries by region, such as Asia, Europe, or Africa.
+- **Country Details:** Click a country to see more information, including population, capital, region, currencies, and languages.
+- **Border Countries:** Click a neighboring country to view its details.
+- **Dark Mode:** Switch between light mode and dark mode.
+- **Responsive Design:** The website works on mobile phones and desktop screens.
+- **Accessibility:** Country flags have alternative text, and interactive elements can be used with a keyboard.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- REST Countries API
+- Git and GitHub
+
+## How to Run the Project
+
+1. Download or clone this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` using the Live Server extension.
+4. The website will open in your browser.
+5. Make sure your API key is configured correctly and your local website origin is allowed in the API settings.
+
+## API Information
+
+This project uses the REST Countries API to get country data, including names, flags, population, capital, region, currencies, and languages.
+
+API website: https://restcountries.com/
+
+## Project Files
+
+- `index.html` — Contains the structure of the website.
+- `style.css` — Contains the styles and responsive layout.
+- `script.js` — Handles API requests, search, filtering, country details, and theme switching.
+- `rest-countries-api-with-color-theme-switcher-master/` — Contains the original challenge files and country data.
+
+## What I Learned
+
+- How to fetch data from an API using JavaScript.
+- How to display API data dynamically on a webpage.
+- How to use search and filters.
+- How to handle click events and update page content.
+- How to create a light and dark theme.
+- How to make a website responsive and improve accessibility.
+- How to use Git and GitHub to manage and share my project.
+
+## Author
+
+Shraddha
+
+## GitHub Repository
+
+https://github.com/shri62/rest-countries-app
